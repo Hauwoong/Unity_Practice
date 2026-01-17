@@ -1,13 +1,20 @@
-# Unity
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
 [Bb]uild/
 [Bb]uilds/
 [Ll]ogs/
+[Mm]emoryCaptures/
 UserSettings/
 
 # Visual Studio / Rider
 .vs/
-*.csproj
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
 *.sln
+.vsconfig
