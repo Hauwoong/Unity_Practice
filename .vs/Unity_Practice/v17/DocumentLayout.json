@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\\uBC15\uC900\uC6C5\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\Unity_Practice\\Unity_Practice\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{20FF612D-6C97-E5E4-C540-DEEF2D3EFDD3}|Assembly-CSharp.csproj|c:\\users\\\uBC15\uC900\uC6C5\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\unity_practice\\unity_practice\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{20FF612D-6C97-E5E4-C540-DEEF2D3EFDD3}|Assembly-CSharp.csproj|C:\\Users\\\uBC15\uC900\uC6C5\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\Unity_Practice\\Unity_Practice\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{20FF612D-6C97-E5E4-C540-DEEF2D3EFDD3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\uBC15\uC900\uC6C5\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\Unity_Practice\\Unity_Practice\\Assets\\Scripts\\NewMonoBehaviourScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\NewMonoBehaviourScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\uBC15\uC900\uC6C5\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\Unity_Practice\\Unity_Practice\\Library\\PackageCache\\com.unity.render-pipelines.universal@65a6875fdfbc\\Shaders\\Lit.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.render-pipelines.universal@65a6875fdfbc\\Shaders\\Lit.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{20FF612D-6C97-E5E4-C540-DEEF2D3EFDD3}|Assembly-CSharp.csproj|c:\\users\\\uBC15\uC900\uC6C5\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\unity_practice\\unity_practice\\assets\\scripts\\animationevents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20FF612D-6C97-E5E4-C540-DEEF2D3EFDD3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\animationevents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,8 +18,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AnimationEvents.cs",
+              "DocumentMoniker": "C:\\Users\\\uBC15\uC900\uC6C5\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\Unity_Practice\\Unity_Practice\\Assets\\Scripts\\AnimationEvents.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\AnimationEvents.cs",
+              "ToolTip": "C:\\Users\\\uBC15\uC900\uC6C5\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\Unity_Practice\\Unity_Practice\\Assets\\Scripts\\AnimationEvents.cs",
+              "RelativeToolTip": "Assets\\Scripts\\AnimationEvents.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-19T16:24:45.655Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -32,33 +41,10 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerController.cs",
               "ToolTip": "C:\\Users\\\uBC15\uC900\uC6C5\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\Unity_Practice\\Unity_Practice\\Assets\\Scripts\\PlayerController.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerController.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAAwBUAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGoAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-17T14:54:54.709Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "NewMonoBehaviourScript.cs",
-              "DocumentMoniker": "C:\\Users\\\uBC15\uC900\uC6C5\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\Unity_Practice\\Unity_Practice\\Assets\\Scripts\\NewMonoBehaviourScript.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\NewMonoBehaviourScript.cs",
-              "ToolTip": "C:\\Users\\\uBC15\uC900\uC6C5\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\Unity_Practice\\Unity_Practice\\Assets\\Scripts\\NewMonoBehaviourScript.cs",
-              "RelativeToolTip": "Assets\\Scripts\\NewMonoBehaviourScript.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-16T15:54:18.274Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Lit.shader",
-              "DocumentMoniker": "C:\\Users\\\uBC15\uC900\uC6C5\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\Unity_Practice\\Unity_Practice\\Library\\PackageCache\\com.unity.render-pipelines.universal@65a6875fdfbc\\Shaders\\Lit.shader",
-              "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.render-pipelines.universal@65a6875fdfbc\\Shaders\\Lit.shader",
-              "ToolTip": "C:\\Users\\\uBC15\uC900\uC6C5\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\Unity_Practice\\Unity_Practice\\Library\\PackageCache\\com.unity.render-pipelines.universal@65a6875fdfbc\\Shaders\\Lit.shader",
-              "RelativeToolTip": "Library\\PackageCache\\com.unity.render-pipelines.universal@65a6875fdfbc\\Shaders\\Lit.shader",
-              "ViewState": "AgIAAJMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
-              "WhenOpened": "2026-01-16T15:18:34.234Z"
             }
           ]
         }
