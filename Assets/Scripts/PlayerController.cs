@@ -1,3 +1,4 @@
+using Unity.Properties;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -20,44 +21,31 @@ public class PlayerController : MonoBehaviour
 
     Vector2 input;
     bool JumpPressed;
+    bool CanMove = true;
+    bool CanJump = true;
 
     private Animator animator;
     private Rigidbody2D rb;
+    private Collider2D col;
     [SerializeField] private bool RightFacing = true;
+    
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponentInChildren<Animator>();
+        col = GetComponent<Collider2D>();
     }
 
     void Update()
     {
-        input = Vector2.zero;
-
-        if (Keyboard.current.aKey.isPressed) {
-            input.x += -1;
-        }
-        if (Keyboard.current.dKey.isPressed) {
-            input.x += 1;
-        }
-        if (Keyboard.current.spaceKey.wasPressedThisFrame) { 
-            JumpPressed = true;
-        }
+        HandleInput();
     }
 
     void FixedUpdate()
     {
         HandleFlip();
-
-        rb.linearVelocity = new Vector2(input.x * speed, rb.linearVelocityY);
-
-        if (JumpPressed && IsGrounded_Raycast()) {
-            rb.linearVelocity = new Vector2(rb.linearVelocityX, JumpForce);
-        }
-
-        JumpPressed = false;
-
+        HandleMovement();
         HandleAnimator();
     }
     // overlap기법
@@ -77,10 +65,60 @@ public class PlayerController : MonoBehaviour
     }
     */
 
+    public void EnalbleJumpAndMovement(bool enable)
+    {
+        CanMove = enable;
+        CanJump = enable;
+    } 
+
+    private void HandleInput() {
+        input = Vector2.zero;
+
+        if (Keyboard.current.leftArrowKey.isPressed)
+        {
+            input.x += -1;
+        }
+        if (Keyboard.current.rightArrowKey.isPressed)
+        {
+            input.x += 1;
+        }
+        if (Keyboard.current.spaceKey.wasPressedThisFrame)
+        {
+            JumpPressed = true;
+        }
+        if (Keyboard.current.aKey.wasPressedThisFrame)
+        {
+            TryToAttack();
+        }
+    }
+
+    private void HandleMovement()
+    {
+        if (CanMove)
+        {
+            rb.linearVelocity = new Vector2(input.x * speed, rb.linearVelocityY);
+        }
+
+        if (JumpPressed && IsGrounded_Raycast() && CanJump)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocityX, JumpForce);
+        }
+
+        JumpPressed = false;
+    }
+    private void TryToAttack()
+    {
+        if (IsGrounded_Raycast())
+        {
+            animator.SetTrigger("Attack");
+            rb.linearVelocity = new Vector2(0, rb.linearVelocityY);
+        }
+    }
+
+   
 
     // Raycast기법
     private bool IsGrounded_Raycast() {
-        Collider2D col = GetComponent<Collider2D>();
         if(col == null) return false;
 
         Vector2 origin = col.bounds.center;
@@ -92,8 +130,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnDrawGizmosSelected()
-    {
-        Collider2D col = GetComponent<Collider2D>();
+    { 
         if (col == null) return;
 
         Gizmos.color = Color.red;
@@ -105,9 +142,12 @@ public class PlayerController : MonoBehaviour
     }
 
     private void HandleAnimator() {
-        bool isMoving = Mathf.Abs(rb.linearVelocityX) > 0.01f;
 
-        animator.SetBool("isMoving", isMoving);
+        animator.SetFloat("xVelocity", rb.linearVelocityX);
+
+        animator.SetFloat("yVelocity", rb.linearVelocityY);
+
+        animator.SetBool("isGrounded", IsGrounded_Raycast());
     }
 
     private void HandleFlip() {
