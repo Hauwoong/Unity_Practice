@@ -3,19 +3,19 @@ using UnityEngine.Timeline;
 
 public class AnimationEvents : MonoBehaviour
 {
-    private PlayerController player;
+    private PlayerMovement player;
     private void Awake()
     {
-        player = GetComponentInParent<PlayerController>();
+        player = GetComponentInParent<PlayerMovement>();
     }
 
-    private void DisableMovementAndJump()
+    public void DisableMovementAndJump()
     {
-        player.EnalbleJumpAndMovement(false);
+        player.SetCanMove(false);
     }
 
-    private void EnableMovementAndJump()
+    public void EnableMovementAndJump()
     {
-        player.EnalbleJumpAndMovement(true);
+        player.SetCanMove(true);
     }
 }

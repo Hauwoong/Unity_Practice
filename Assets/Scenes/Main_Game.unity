@@ -613,6 +613,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1656431687}
   - component: {fileID: 1656431688}
+  - component: {fileID: 1656431691}
+  - component: {fileID: 1656431690}
   - component: {fileID: 1656431685}
   - component: {fileID: 1656431689}
   m_Layer: 0
@@ -678,13 +680,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ed92a9f791ee5f4e878630328c494d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  speed: 8
-  JumpForce: 10
-  RayDistance: 0.33
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  RightFacing: 1
 --- !u!70 &1656431689
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -722,6 +717,37 @@ CapsuleCollider2D:
   m_Offset: {x: -0.46946192, y: -0.22571039}
   m_Size: {x: 1.143693, y: 2.1093884}
   m_Direction: 0
+--- !u!114 &1656431690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656431683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5853b1efac4dca4b9f3b9fc2e0ecc0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAttack
+--- !u!114 &1656431691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656431683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e2f80a4e073b944e8a4913fc1572750, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  speed: 6
+  JumpForce: 12
+  RayDistance: 0.5
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  RightFacing: 1
 --- !u!1 &1746496178
 GameObject:
   m_ObjectHideFlags: 0
