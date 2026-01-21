@@ -1,21 +1,16 @@
 using UnityEngine;
-using UnityEngine.Timeline;
 
 public class AnimationEvents : MonoBehaviour
 {
-    private PlayerController player;
+    
+    private PlayerAttack attack;
     private void Awake()
     {
-        player = GetComponentInParent<PlayerController>();
+        attack = GetComponentInParent<PlayerAttack>();
     }
 
-    private void DisableMovementAndJump()
+    public void OnAttackHit()
     {
-        player.EnalbleJumpAndMovement(false);
-    }
-
-    private void EnableMovementAndJump()
-    {
-        player.EnalbleJumpAndMovement(true);
+        attack?.DealDamage();
     }
 }
