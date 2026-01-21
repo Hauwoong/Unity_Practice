@@ -23,15 +23,14 @@ public class PlayerController : MonoBehaviour
         {
             attack.TryToAttack();
         }
-
-        UpdateMovementLock();
     }
 
     void FixedUpdate()
     {
-        movement.FixedUpdateMove();
-        movement.HandleFlip();
-        movement.HandleMovementAnimations();
+        UpdateMovementLock(); // 상태결정(락 여부)
+        movement.FixedUpdateMove();// 물리 계산 (속도/힘)
+        movement.HandleFlip(); // 물리 계산 (속도/힘)
+        movement.HandleMovementAnimations(); // 애니메이션 파라미터 반영
     }
 
     void UpdateMovementLock()

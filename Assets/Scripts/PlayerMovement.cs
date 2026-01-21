@@ -1,4 +1,6 @@
 
+using System.Collections.Generic;
+using Unity.Properties;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -19,15 +21,19 @@ public class PlayerMovement : MonoBehaviour
     //땅 레이어 설정
     [SerializeField] private LayerMask groundLayer;
 
-    Vector2 input;
-    bool JumpPressed;
+    Vector2 input; // 이동 방향 입력
+
+    bool JumpPressed; 
     bool CanMove = true;
     [SerializeField] bool RightFacing = true;
     bool isGrounded;
 
     private Rigidbody2D rb;
-    private Collider2D col;
     private Animator animator;
+    private Collider2D col;
+    public Transform Playertransform => transform;
+
+
 
     private void Awake()
     {
@@ -113,6 +119,7 @@ public class PlayerMovement : MonoBehaviour
 
         Gizmos.DrawLine(origin, origin + Vector2.down * RayDistance);
     }
+    
 
     public void Filp()
     {
@@ -129,4 +136,5 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.linearVelocity = new Vector2(0f, rb.linearVelocityY);
     }
+
 }
